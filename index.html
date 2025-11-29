@@ -92,7 +92,11 @@ lightGallery(document.getElementById('post-bg'), {
    }
  }
 });
-document.addEventListener("pjax:complete", reset);reset()})</script><meta name="generator" content="Hexo 7.3.0"><style>mjx-container[jax="SVG"] {
+document.addEventListener("pjax:complete", reset);reset()})</script><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"><style>mjx-container[jax="SVG"] {
   direction: ltr;
 }
 
@@ -205,145 +209,139 @@ mjx-container[display="true"] + br {
   display: none;
 }
 </style></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="Search" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li></ol></nav></header><article><div class="posts"><a class="recent-post" href="/dedekind/"><object><div class="recent-info"><span class="categories"><object><a href="/categories/%E5%A4%A7%E5%AD%A6%E4%B8%93%E4%B8%9A%E8%AF%BE/">大学专业课</a></object></span><span class="tags"><object><a href="/tags/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/">数学分析</a></object></span><time datetime="2025-10-24T07:31:40.000Z">2025-10-24</time></div><h1 class="recent-title">数学分析补充-Dedekind 分割</h1><div class="recent-excerpt"></div><span class="read-more">READ MORE +</span></object></a><a class="recent-post" href="/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90-%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><object><div class="recent-info"><span class="categories"><object><a href="/categories/%E5%A4%A7%E5%AD%A6%E4%B8%93%E4%B8%9A%E8%AF%BE/">大学专业课</a></object></span><span class="tags"><object><a href="/tags/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/">数学分析</a></object><object><a href="/tags/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/">高等代数</a></object></span><time datetime="2025-09-17T09:25:46.000Z">2025-09-17</time></div><h1 class="recent-title">数学分析&amp;高等代数 学习笔记</h1><div class="recent-excerpt"></div><span class="read-more">READ MORE +</span></object></a><a class="recent-post" href="/CF-%E6%9D%82%E9%A2%98%E9%80%89%E5%81%9A-2025-9/"><object><div class="recent-info"><span class="categories"><object><a href="/categories/CF-%E9%80%89%E5%81%9A/">CF 选做</a></object></span><span class="tags"><object><a href="/tags/%E6%9D%82%E9%A2%98/">杂题</a></object></span><time datetime="2025-09-06T15:06:21.000Z">2025-09-06</time></div><h1 class="recent-title">CF 杂题选做-2025.9</h1><div class="recent-excerpt"><hr><!-- toc -->
-
 <ul>
 <li><a href="#cf2128">CF2128</a><ul>
 <li><a href="#d">D</a><ul>
-<li><a href="#%E9%A2%98%E6%84%8F">题意</a></li>
-<li><a href="#%E9%A2%98%E8%A7%A3">题解</a></li>
+<li><a href="#题意">题意</a></li>
+<li><a href="#题解">题解</a></li>
 </ul>
 </li>
 <li><a href="#e">E</a><ul>
-<li><a href="#%E9%A2%98%E6%84%8F-1">题意</a></li>
+<li><a href="#题意-1">题意</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 <!-- tocstop --></div><span class="read-more">READ MORE +</span></object></a><a class="recent-post" href="/%E5%B8%B8%E7%94%A8-%E7%BB%93%E8%AE%BA/"><object><div class="recent-info"><span class="categories"><span>NO CATEGORY</span></span><span class="tags"><span>empty</span></span><time datetime="2025-07-21T12:09:47.000Z">2025-07-21</time></div><h1 class="recent-title">常用(?)结论</h1><div class="recent-excerpt"><hr><!-- toc -->
-
 <ul>
-<li><a href="#%E5%9B%BE">图</a><ul>
-<li><a href="#%E6%9C%80%E7%9F%AD%E8%B7%AF">最短路</a></li>
+<li><a href="#图">图</a><ul>
+<li><a href="#最短路">最短路</a></li>
 </ul>
 </li>
-<li><a href="#%E4%BA%8C%E8%BF%9B%E5%88%B6">二进制</a><ul>
-<li><a href="#%E6%9E%9A%E4%B8%BE%E5%AD%90%E9%9B%86">枚举子集</a></li>
+<li><a href="#二进制">二进制</a><ul>
+<li><a href="#枚举子集">枚举子集</a></li>
 </ul>
 </li>
 </ul>
 <!-- tocstop --></div><span class="read-more">READ MORE +</span></object></a><a class="recent-post" href="/CF2122-%E6%80%BB%E7%BB%93/"><object><div class="recent-info"><span class="categories"><object><a href="/categories/CF-%E6%80%BB%E7%BB%93/">CF 总结</a></object></span><span class="tags"><object><a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a></object><object><a href="/tags/dp/">dp</a></object><object><a href="/tags/%E5%9B%BE%E8%AE%BA/">图论</a></object><object><a href="/tags/%E5%A4%9A%E8%BE%B9%E5%BD%A2/">多边形</a></object></span><time datetime="2025-07-21T11:06:26.000Z">2025-07-21</time></div><h1 class="recent-title">CF2122-总结</h1><div class="recent-excerpt"><hr><!-- toc -->
-
 <ul>
-<li><a href="#cf2122-%E6%80%BB%E7%BB%93">CF2122-总结</a><ul>
+<li><a href="#cf2122-总结">CF2122-总结</a><ul>
 <li><a href="#a">A</a><ul>
-<li><a href="#%E7%BF%BB%E8%AF%91">翻译</a></li>
-<li><a href="#%E9%A2%98%E8%A7%A3">题解</a></li>
+<li><a href="#翻译">翻译</a></li>
+<li><a href="#题解">题解</a></li>
 </ul>
 </li>
 <li><a href="#b">B</a><ul>
-<li><a href="#%E7%BF%BB%E8%AF%91-1">翻译</a></li>
-<li><a href="#%E9%A2%98%E8%A7%A3-1">题解</a></li>
+<li><a href="#翻译-1">翻译</a></li>
+<li><a href="#题解-1">题解</a></li>
 </ul>
 </li>
 <li><a href="#c">C</a><ul>
-<li><a href="#%E7%BF%BB%E8%AF%91-2">翻译</a></li>
-<li><a href="#%E9%A2%98%E8%A7%A3-2">题解</a></li>
+<li><a href="#翻译-2">翻译</a></li>
+<li><a href="#题解-2">题解</a></li>
 </ul>
 </li>
 <li><a href="#d">D</a><ul>
-<li><a href="#%E7%BF%BB%E8%AF%91-3">翻译</a></li>
-<li><a href="#%E9%A2%98%E8%A7%A3-3">题解</a></li>
+<li><a href="#翻译-3">翻译</a></li>
+<li><a href="#题解-3">题解</a></li>
 </ul>
 </li>
 <li><a href="#e">E</a><ul>
-<li><a href="#%E9%A2%98%E6%84%8F">题意</a></li>
-<li><a href="#%E9%A2%98%E8%A7%A3-4">题解</a></li>
+<li><a href="#题意">题意</a></li>
+<li><a href="#题解-4">题解</a></li>
 </ul>
 </li>
 <li><a href="#f">F</a><ul>
-<li><a href="#%E9%A2%98%E6%84%8F-1">题意</a></li>
-<li><a href="#%E9%A2%98%E8%A7%A3-5">题解</a></li>
+<li><a href="#题意-1">题意</a></li>
+<li><a href="#题解-5">题解</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 <!-- tocstop --></div><span class="read-more">READ MORE +</span></object></a><a class="recent-post" href="/%E9%94%99%E9%A2%98%E6%9C%AC/"><object><div class="recent-info"><span class="categories"><object><a href="/categories/%E9%94%99%E9%A2%98%E6%9C%AC/">错题本</a></object></span><span class="tags"><span>empty</span></span><time datetime="2025-07-21T10:30:04.000Z">2025-07-21</time></div><h1 class="recent-title">错题本</h1><div class="recent-excerpt"><hr><!-- toc -->
-
 <ul>
-<li><a href="#stl-%E4%BD%BF%E7%94%A8">STL 使用</a></li>
-<li><a href="#%E6%9D%82%E9%A1%B9">杂项</a></li>
+<li><a href="#stl-使用">STL 使用</a></li>
+<li><a href="#杂项">杂项</a></li>
 </ul>
 <!-- tocstop --></div><span class="read-more">READ MORE +</span></object></a><a class="recent-post" href="/CF2111-%E6%80%BB%E7%BB%93/"><object><div class="recent-info"><span class="categories"><object><a href="/categories/CF-%E6%80%BB%E7%BB%93/">CF 总结</a></object></span><span class="tags"><object><a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a></object><object><a href="/tags/%E6%A8%A1%E6%8B%9F/">模拟</a></object><object><a href="/tags/%E8%B4%AA%E5%BF%83/">贪心</a></object><object><a href="/tags/%E6%9E%84%E9%80%A0/">构造</a></object></span><time datetime="2025-07-15T01:11:01.000Z">2025-07-15</time></div><h1 class="recent-title">CF2111 总结</h1><div class="recent-excerpt"><hr><!-- toc -->
-
 <ul>
-<li><a href="#cf2111-%E6%80%BB%E7%BB%93">CF2111 总结</a><ul>
+<li><a href="#cf2111-总结">CF2111 总结</a><ul>
 <li><a href="#a">A</a><ul>
-<li><a href="#%E7%BF%BB%E8%AF%91">翻译</a></li>
-<li><a href="#%E9%A2%98%E8%A7%A3">题解</a></li>
+<li><a href="#翻译">翻译</a></li>
+<li><a href="#题解">题解</a></li>
 </ul>
 </li>
 <li><a href="#b">B</a><ul>
-<li><a href="#%E7%BF%BB%E8%AF%91-1">翻译</a></li>
-<li><a href="#%E9%A2%98%E8%A7%A3-1">题解</a></li>
+<li><a href="#翻译-1">翻译</a></li>
+<li><a href="#题解-1">题解</a></li>
 </ul>
 </li>
 <li><a href="#c">C</a><ul>
-<li><a href="#%E7%BF%BB%E8%AF%91-2">翻译</a></li>
-<li><a href="#%E9%A2%98%E8%A7%A3-2">题解</a></li>
+<li><a href="#翻译-2">翻译</a></li>
+<li><a href="#题解-2">题解</a></li>
 </ul>
 </li>
 <li><a href="#d">D</a><ul>
-<li><a href="#%E7%BF%BB%E8%AF%91-3">翻译</a></li>
-<li><a href="#%E9%A2%98%E8%A7%A3-3">题解</a></li>
+<li><a href="#翻译-3">翻译</a></li>
+<li><a href="#题解-3">题解</a></li>
 </ul>
 </li>
 <li><a href="#e">E</a><ul>
-<li><a href="#%E7%BF%BB%E8%AF%91-4">翻译</a></li>
-<li><a href="#%E9%A2%98%E8%A7%A3-4">题解</a></li>
+<li><a href="#翻译-4">翻译</a></li>
+<li><a href="#题解-4">题解</a></li>
 </ul>
 </li>
 <li><a href="#f">F</a><ul>
-<li><a href="#%E7%BF%BB%E8%AF%91-5">翻译</a></li>
-<li><a href="#%E9%A2%98%E8%A7%A3-5">题解</a></li>
+<li><a href="#翻译-5">翻译</a></li>
+<li><a href="#题解-5">题解</a></li>
 </ul>
 </li>
 <li><a href="#g">G</a><ul>
-<li><a href="#%E7%BF%BB%E8%AF%91-6">翻译</a></li>
-<li><a href="#%E9%A2%98%E8%A7%A3-6">题解</a></li>
+<li><a href="#翻译-6">翻译</a></li>
+<li><a href="#题解-6">题解</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 <!-- tocstop --></div><span class="read-more">READ MORE +</span></object></a><a class="recent-post" href="/%E6%9A%91%E5%81%87%E6%97%A5%E8%AE%B0/"><object><div class="recent-info"><span class="categories"><object><a href="/categories/%E6%9A%91%E5%81%87%E6%97%A5%E8%AE%B0/">暑假日记</a></object></span><span class="tags"><object><a href="/tags/%E8%AE%B0%E5%BD%95/">记录</a></object><object><a href="/tags/%E5%B7%A5%E7%A8%8B/">工程</a></object><object><a href="/tags/%E7%94%9F%E6%B4%BB/">生活</a></object><object><a href="/tags/ACM/">ACM</a></object></span><time datetime="2025-07-14T03:25:15.000Z">2025-07-14</time></div><h1 class="recent-title">暑假日记</h1><div class="recent-excerpt"><hr><!-- toc -->
-
 <ul>
-<li><a href="#%E6%9A%91%E6%9C%9F%E6%97%A5%E8%AE%B0%E9%A1%B9%E7%9B%AE">暑期日记项目</a></li>
-<li><a href="#%E4%B8%83%E6%9C%88">七月</a><ul>
+<li><a href="#暑期日记项目">暑期日记项目</a></li>
+<li><a href="#七月">七月</a><ul>
 <li><a href="#714">7.14</a><ul>
-<li><a href="#%E6%97%A9%E4%B8%8A">早上</a></li>
-<li><a href="#%E4%B8%8B%E5%8D%88">下午</a></li>
-<li><a href="#%E6%99%9A%E4%B8%8A">晚上</a></li>
+<li><a href="#早上">早上</a></li>
+<li><a href="#下午">下午</a></li>
+<li><a href="#晚上">晚上</a></li>
 </ul>
 </li>
 <li><a href="#715">7.15</a><ul>
-<li><a href="#%E6%97%A9%E4%B8%8A-1">早上</a></li>
-<li><a href="#%E4%B8%8B%E5%8D%88-1">下午</a></li>
-<li><a href="#%E6%99%9A%E4%B8%8A-1">晚上</a></li>
+<li><a href="#早上-1">早上</a></li>
+<li><a href="#下午-1">下午</a></li>
+<li><a href="#晚上-1">晚上</a></li>
 </ul>
 </li>
 <li><a href="#716">7.16</a><ul>
-<li><a href="#%E6%97%A9%E4%B8%8A-2">早上</a></li>
-<li><a href="#%E4%B8%8B%E5%8D%88-2">下午</a></li>
-<li><a href="#%E6%99%9A%E4%B8%8A-2">晚上</a></li>
+<li><a href="#早上-2">早上</a></li>
+<li><a href="#下午-2">下午</a></li>
+<li><a href="#晚上-2">晚上</a></li>
 </ul>
 </li>
 <li><a href="#717">7.17</a><ul>
-<li><a href="#%E6%97%A9%E4%B8%8A-3">早上</a></li>
-<li><a href="#%E4%B8%8B%E5%8D%88-3">下午</a></li>
-<li><a href="#%E6%99%9A%E4%B8%8A-3">晚上</a></li>
+<li><a href="#早上-3">早上</a></li>
+<li><a href="#下午-3">下午</a></li>
+<li><a href="#晚上-3">晚上</a></li>
 </ul>
 </li>
 </ul>
